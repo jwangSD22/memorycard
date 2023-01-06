@@ -1,6 +1,12 @@
-import './App.css';
+import './css/App.css';
 import {useState} from 'react'
 import {sym,img,dom} from './data'
+import Header from './Header'
+import Score from './Score';
+import Highscore from './Highscore';
+import Toggle from './Toggle';
+import Cardfield from './Cardfield';
+import Footer from './Footer';
 
 
 

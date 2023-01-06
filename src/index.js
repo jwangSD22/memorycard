@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './css/index.css';
 import MemoryMain from './MemoryMain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
