@@ -2,7 +2,7 @@ import React from 'react'
 
 function Score({memArray}) {
   return (
-    <div>Score:{memArray.length}</div>
+    <div>Score : {memArray.length}</div>
   )
 }
 

@@ -1,10 +1,53 @@
 .App {
-  display:flex;
+  height: 100%;
+  width: 100%;
+  background-color: darkgray;
+  display: flex;
+  position: absolute;
+  align-items: center;
   flex-direction: column;
-  text-align: center;
 }
 
-.card{
-  width:100px;
-  height:100px
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+  position: fixed;
+  bottom: 50px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  border:solid 1px black;
+  box-shadow: 5px 5px rgba(29, 29, 29, 0.5);
+}
+
+.card:hover{
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.dataBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  gap: 50px;
+}
+.gameContainer {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

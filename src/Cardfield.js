@@ -18,27 +18,22 @@ function Cardfield({ format, setMemArray, memArray }) {
   const randomArray = randomizer();
 
   const clickHandler = (e) => {
-    let num = e.target.id
-    for(let item of memArray){
-      if(item===num){
-        return setMemArray([])
+    let num = e.target.id;
+    for (let item of memArray) {
+      if (item === num) {
+        return setMemArray([]);
       }
-         }
-    setMemArray([...memArray, num])
+    }
+    setMemArray([...memArray, num]);
   };
 
-  useEffect(
-    ()=>{
-setMemArray([])
-    }
-  ,[format])
+  useEffect(() => {
+    setMemArray([]);
+  }, [format]);
 
-
-if(memArray.length===17){
-  return <div>YOU WIN!</div>
-}
-
-
+  if (memArray.length === 2) {
+    return <div>YOU WIN!</div>;
+  }
 
   return (
     <>
