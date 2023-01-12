@@ -1,8 +1,20 @@
 import React from 'react'
+import {useState,useEffect} from 'react'
 
-function Highscore() {
+function Highscore({format,memArray}) {
+const [highscore,setHighscore] = useState(0)
+
+if(memArray.length>highscore){
+  setHighscore(memArray.length)
+}
+
+
+useEffect(()=>{
+setHighscore(0)
+},[format])
+
   return (
-    <div>Highscore</div>
+    <div>Highscore : {highscore}</div>
   )
 }
 

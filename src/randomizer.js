@@ -1,3 +1,5 @@
+//creates random array of numbers from 1-17//
+
 export default function randomizer () {
   let array = []
   let set = new Set

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Score() {
+function Score({memArray}) {
   return (
-    <div>Score</div>
+    <div>Score:{memArray.length}</div>
   )
 }
 

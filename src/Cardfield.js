@@ -1,9 +1,59 @@
-import React from 'react'
+import React from "react";
+import { useEffect } from "react";
+import randomizer from "./randomizer";
+import { sym, img, dom } from "./data";
 
-function Cardfield() {
-  return (
-    <div>Cardfield</div>
-  )
+function Cardfield({ format, setMemArray, memArray }) {
+  let thisFormat = () => {
+    if (format === "sym") {
+      return sym;
+    }
+    if (format === "img") {
+      return img;
+    }
+    if (format === "dom") {
+      return dom;
+    }
+  };
+  const randomArray = randomizer();
+
+  const clickHandler = (e) => {
+    let num = e.target.id
+    for(let item of memArray){
+      if(item===num){
+        return setMemArray([])
+      }
+         }
+    setMemArray([...memArray, num])
+  };
+
+  useEffect(
+    ()=>{
+setMemArray([])
+    }
+  ,[format])
+
+
+if(memArray.length===17){
+  return <div>YOU WIN!</div>
 }
 
-export default Cardfield
+
+
+  return (
+    <>
+      {randomArray.map((item) => (
+        <div key={item}>
+          <img
+            id={item}
+            onClick={clickHandler}
+            className="card"
+            src={thisFormat()[item]}
+          ></img>
+        </div>
+      ))}
+    </>
+  );
+}
+
+export default Cardfield;
