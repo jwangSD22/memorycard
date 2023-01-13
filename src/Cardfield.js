@@ -29,10 +29,10 @@ function Cardfield({ format, setMemArray, memArray }) {
 
   useEffect(() => {
     setMemArray([]);
-  }, [format]);
+  }, [format,setMemArray]);
 
-  if (memArray.length === 2) {
-    return <div>YOU WIN!</div>;
+  if (memArray.length === 17) {
+    return <div>YOU WIN! Try another format!</div>;
   }
 
   return (
@@ -44,6 +44,7 @@ function Cardfield({ format, setMemArray, memArray }) {
             onClick={clickHandler}
             className="card"
             src={thisFormat()[item]}
+            alt={thisFormat()+item}
           ></img>
         </div>
       ))}

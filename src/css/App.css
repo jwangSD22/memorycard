@@ -1,3 +1,18 @@
+input[type=radio] {
+  border: 0px;
+  width:2em;
+  height: 2em;
+  margin:15px;
+}
+
+
+.chFont{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size:100px;
+}
+
+
+
 .App {
   height: 100%;
   width: 100%;
@@ -12,7 +27,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 75px;
+  margin-top:25px;
+  
 }
 
 .footer {
@@ -28,14 +45,12 @@
   width: 200px;
   height: 200px;
   border:solid 1px black;
-  box-shadow: 5px 5px rgba(29, 29, 29, 0.5);
+  box-shadow: 5px 5px 8px rgba(29, 29, 29, 0.5);
 }
 
 .card:hover{
   transform: scale(0.98);
-  /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  /* Lowering the shadow */
 }
 
 .dataBar {
@@ -44,6 +59,7 @@
   align-items: center;
   height: 100px;
   gap: 50px;
+  font-size:2em;
 }
 .gameContainer {
   display: grid;

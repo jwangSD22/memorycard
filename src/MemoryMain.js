@@ -1,6 +1,5 @@
 import './css/App.css';
-import {useState, useEffect} from 'react'
-import {sym,img,dom} from './data'
+import {useState} from 'react'
 import Header from './Header'
 import Score from './Score';
 import Highscore from './Highscore';
